@@ -1,0 +1,10 @@
+[
+    {
+        "command": "fps_max 0",
+        "description": "Снимает ограничение FPS"
+    },
+    {
+        "command": "cl_showfps 1",
+        "description": "Показывает FPS"
+    }
+]
