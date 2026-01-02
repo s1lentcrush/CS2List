@@ -47,7 +47,8 @@ aside {
     width: 220px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding-top: 60px; /* ← регулируй высоту */
     border-right: 1px solid #333;
 }
 
