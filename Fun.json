@@ -1,0 +1,6 @@
+[
+    {
+        "command": "host_timescale 2",
+        "description": "Ускоряет игру"
+    }
+]
