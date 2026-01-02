@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Темы */
+body.dark {
+    background: #0f0f0f;
+    color: #f0f0f0;
+}
+
+body.light {
+    background: #f5f5f5;
+    color: #111;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    border-bottom: 1px solid #333;
+}
+
+#themeToggle {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: inherit;
+}
+
+/* Навигация */
+nav {
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+    border-bottom: 1px solid #333;
+}
+
+.tab {
+    padding: 8px 14px;
+    background: none;
+    border: 1px solid #555;
+    color: inherit;
+    cursor: pointer;
+}
+
+.tab.active {
+    background: #444;
+}
+
+body.light .tab.active {
+    background: #ddd;
+}
+
+/* Команды */
+main {
+    padding: 20px;
+}
+
+.command {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #333;
+}
+
+.command i {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.command i:hover {
+    opacity: 1;
+}
+
+.command span {
+    white-space: pre-wrap;
+}
