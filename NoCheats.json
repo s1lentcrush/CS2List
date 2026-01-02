@@ -1,0 +1,6 @@
+[
+    {
+        "command": "net_graph 1",
+        "description": "Сетевой график"
+    }
+]
