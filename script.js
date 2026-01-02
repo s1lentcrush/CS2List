@@ -1,39 +1,42 @@
 const commandsContainer = document.getElementById("commands");
-const tabs = document.querySelectorAll(".tab");
+const select = document.getElementById("categorySelect");
 const themeToggle = document.getElementById("themeToggle");
 
-/* Загрузка команд */
 async function loadCommands(file) {
-    commandsContainer.innerHTML = "Загрузка...";
+    commandsContainer.innerHTML = `<div class="commands-wrapper">Загрузка...</div>`;
+
     const response = await fetch(file);
     const data = await response.json();
 
-    commandsContainer.innerHTML = "";
+    const wrapper = document.createElement("div");
+    wrapper.className = "commands-wrapper";
 
     data.forEach(item => {
-        const div = document.createElement("div");
-        div.className = "command";
+        const card = document.createElement("div");
+        card.className = "command-card";
 
-        div.innerHTML = `
-            <i class="fa-solid fa-file" title="Скопировать"></i>
-            <span><b>${item.command}</b> — ${item.description}</span>
+        card.innerHTML = `
+            <div class="command-header">
+                <div class="command-text">${item.command}</div>
+                <i class="fa-solid fa-copy copy" title="Скопировать"></i>
+            </div>
+            <div class="description">${item.description}</div>
         `;
 
-        div.querySelector("i").addEventListener("click", () => {
+        card.querySelector(".copy").addEventListener("click", () => {
             navigator.clipboard.writeText(item.command);
         });
 
-        commandsContainer.appendChild(div);
+        wrapper.appendChild(card);
     });
+
+    commandsContainer.innerHTML = "";
+    commandsContainer.appendChild(wrapper);
 }
 
-/* Переключение вкладок */
-tabs.forEach(tab => {
-    tab.addEventListener("click", () => {
-        tabs.forEach(t => t.classList.remove("active"));
-        tab.classList.add("active");
-        loadCommands(tab.dataset.file);
-    });
+/* Dropdown */
+select.addEventListener("change", () => {
+    loadCommands(select.value);
 });
 
 /* Тема */
@@ -42,5 +45,5 @@ themeToggle.addEventListener("click", () => {
     document.body.classList.toggle("light");
 });
 
-/* Первая загрузка */
+/* Старт */
 loadCommands("Main.json");
