@@ -1,6 +1,14 @@
 [
     {
-        "command": "host_timescale 2",
-        "description": "Ускоряет игру"
+        "command": "host_timescale X",
+        "description": "Ускоряет игру в X раз. По умолчанию 1 (X - Ваше значение)"
+    },
+    {
+        "command": "sv_enablebunnyhopping 1",
+        "description": "Разрешает BunnyHop на сервере."
+    },
+    {
+        "command": "sv_autobunnyhopping 1",
+        "description": "Включает автоматический прыжок при БанниХопе. Для использования зажать пробел/кнопка прыжка."
     }
 ]
