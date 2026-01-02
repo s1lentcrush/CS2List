@@ -1,0 +1,10 @@
+[
+    {
+        "command": "sv_cheats 1",
+        "description": "Включает читы"
+    },
+    {
+        "command": "sv_infinite_ammo 1",
+        "description": "Бесконечные патроны"
+    }
+]
