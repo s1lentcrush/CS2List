@@ -18,20 +18,18 @@
 
 <div class="layout">
 
-    <!-- Левая панель -->
+    <!-- Левое меню -->
     <aside>
-        <select id="categorySelect">
-            <option value="Main.json">Основные</option>
-            <option value="Training.json">Тренировочные</option>
-            <option value="Fun.json">Фан</option>
-            <option value="NoCheats.json">Без читов</option>
-        </select>
+        <div class="categories">
+            <button class="category active" data-file="Main.json">Основные</button>
+            <button class="category" data-file="Training.json">Тренировочные</button>
+            <button class="category" data-file="Fun.json">Фан</button>
+            <button class="category" data-file="NoCheats.json">Без читов</button>
+        </div>
     </aside>
 
-    <!-- Контент -->
-    <main id="commands">
-        <!-- Команды -->
-    </main>
+    <!-- Команды -->
+    <main id="commands"></main>
 
 </div>
 
