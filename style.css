@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: "Segoe UI", Arial, sans-serif;
 }
 
 body {
@@ -10,21 +10,21 @@ body {
 
 /* Темы */
 body.dark {
-    background: #0f0f0f;
-    color: #f0f0f0;
+    background: #0b0b0b;
+    color: #f2f2f2;
 }
 
 body.light {
-    background: #f5f5f5;
+    background: #f4f4f4;
     color: #111;
 }
 
 /* Header */
 header {
+    padding: 15px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 25px;
     border-bottom: 1px solid #333;
 }
 
@@ -36,52 +36,86 @@ header {
     color: inherit;
 }
 
-/* Навигация */
-nav {
+/* Layout */
+.layout {
     display: flex;
-    gap: 10px;
-    padding: 15px;
-    border-bottom: 1px solid #333;
+    height: calc(100vh - 70px);
 }
 
-.tab {
-    padding: 8px 14px;
-    background: none;
-    border: 1px solid #555;
+/* Sidebar */
+aside {
+    width: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #333;
+}
+
+select {
+    width: 170px;
+    padding: 10px;
+    background: inherit;
     color: inherit;
+    border: 1px solid #555;
+    border-radius: 6px;
     cursor: pointer;
 }
 
-.tab.active {
-    background: #444;
-}
-
-body.light .tab.active {
-    background: #ddd;
+/* Main */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px;
+    overflow-y: auto;
 }
 
 /* Команды */
-main {
-    padding: 20px;
+.commands-wrapper {
+    width: 100%;
+    max-width: 600px;
 }
 
-.command {
+.command-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 15px 18px;
+    margin-bottom: 15px;
+    transition: transform 0.15s;
+}
+
+body.light .command-card {
+    background: #fff;
+}
+
+.command-card:hover {
+    transform: translateY(-2px);
+}
+
+.command-header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 10px;
-    padding: 8px 0;
-    border-bottom: 1px solid #333;
 }
 
-.command i {
+.command-text {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.copy {
     cursor: pointer;
     opacity: 0.7;
 }
 
-.command i:hover {
+.copy:hover {
     opacity: 1;
 }
 
-.command span {
-    white-space: pre-wrap;
+.description {
+    margin-top: 6px;
+    font-size: 13px;
+    opacity: 0.7;
 }
