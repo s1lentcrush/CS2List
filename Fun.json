@@ -10,5 +10,17 @@
     {
         "command": "sv_autobunnyhopping 1",
         "description": "Включает автоматический прыжок при БанниХопе. Для использования зажать пробел/кнопка прыжка."
+    },
+    {
+        "command": "subclass_create weapon_deagle_prefab {"classname" "weapon_awp" "rendercolor" "255 215 0"}",
+        "description": "Спавнит золотой дигл, который убивает с первого выстрела."
+    },
+    {
+        "command": "dlight_debug",
+        "description": "Спавнит жёлтую точку, которая светится."
+    },
+    {
+        "command": "map_setbombradius 9999",
+        "description": "Бомба взрывает всю карту"
     }
 ]
