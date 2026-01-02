@@ -1,5 +1,5 @@
 const commandsContainer = document.getElementById("commands");
-const select = document.getElementById("categorySelect");
+const categories = document.querySelectorAll(".category");
 const themeToggle = document.getElementById("themeToggle");
 
 async function loadCommands(file) {
@@ -34,9 +34,13 @@ async function loadCommands(file) {
     commandsContainer.appendChild(wrapper);
 }
 
-/* Dropdown */
-select.addEventListener("change", () => {
-    loadCommands(select.value);
+/* Переключение категорий */
+categories.forEach(btn => {
+    btn.addEventListener("click", () => {
+        categories.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        loadCommands(btn.dataset.file);
+    });
 });
 
 /* Тема */
