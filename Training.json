@@ -6,5 +6,9 @@
     {
         "command": "sv_infinite_ammo 1",
         "description": "Бесконечные патроны"
+    }, 
+    {
+        "command": " sv_grenade_trajectory_prac_preview 1", 
+        "description": "Включает просмотр траектории гранат. "
     }
 ]
