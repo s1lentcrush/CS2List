@@ -18,5 +18,9 @@
     {
         "command": "map_setbombradius 9999",
         "description": "Бомба взрывает всю карту"
+    },
+    {
+        "command": "mp_drop_knife_enable true",
+        "description": "Разрешает выбрасывать нож."
     }
 ]
